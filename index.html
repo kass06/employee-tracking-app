@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="assets/images/Code with kass logo.jpg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Tracker - Consulting Company</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome -->
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <!-- Logo -->
+            <img src="assets/images/Code with kass logo.jpg" alt="Company Logo" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#employees"><i class="fa fa-users"></i> Employees</a></li>
+                <li><a href="#addEmployee"><i class="fa fa-user-plus"></i> Add Employee</a></li>
+                <li><a href="#settings"><i class="fa fa-cogs"></i> Settings</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="section dashboard">
+            <h1>Dashboard</h1>
+            <div class="dashboard-cards">
+                <div class="card">
+                    <h3>Total Employees</h3>
+                    <p id="employeeCount">0</p>
+                </div>
+                <div class="card">
+                    <h3>Active Employees</h3>
+                    <p id="activeEmployees">0</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Employees Section -->
+        <section id="employees" class="section employees">
+            <h1>Employees</h1>
+            <div id="employeeList" class="employee-list">
+                <!-- Employee Cards will be inserted here dynamically -->
+            </div>
+        </section>
+
+        <!-- Add Employee Section -->
+        <section id="addEmployee" class="section add-employee">
+            <h1>Add Employee</h1>
+            <form id="employeeForm">
+                <input type="text" id="employeeName" placeholder="Employee Name" required>
+                <input type="email" id="employeeEmail" placeholder="Employee Email" required>
+                <input type="text" id="employeePosition" placeholder="Employee Position" required>
+                <button type="submit">Add Employee</button>
+            </form>
+        </section>
+
+        <!-- Settings Section -->
+        <section id="settings" class="section settings">
+            <h1>Settings</h1>
+            <!-- Theme Toggle -->
+            <div class="settings-item">
+                <label for="themeToggle">Theme</label>
+                <input type="checkbox" id="themeToggle">
+                <span id="themeStatus">Dark Mode</span>
+            </div>
+
+            <!-- Account Settings -->
+            <div class="settings-item">
+                <h3>Account Settings</h3>
+                <form id="accountForm">
+                    <input type="text" id="accountName" placeholder="Full Name" value="John Doe">
+                    <input type="email" id="accountEmail" placeholder="Email" value="johndoe@example.com">
+                    <button type="submit">Save Changes</button>
+                </form>
+            </div>
+
+            <!-- Notification Settings -->
+            <div class="settings-item">
+                <h3>Notification Settings</h3>
+                <label for="notificationToggle">Enable Notifications</label>
+                <input type="checkbox" id="notificationToggle" checked>
+            </div>
+
+            <!-- Language Preferences -->
+            <div class="settings-item">
+                <h3>Language Preferences</h3>
+                <select id="languageSelect">
+                    <option value="en">English</option>
+                    <option value="es">Spanish</option>
+                    <option value="fr">French</option>
+                </select>
+            </div>
+
+            <!-- Privacy Settings -->
+            <div class="settings-item">
+                <h3>Privacy Settings</h3>
+                <label for="dataVisibility">Enable Employee Data Visibility</label>
+                <input type="checkbox" id="dataVisibility" checked>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
